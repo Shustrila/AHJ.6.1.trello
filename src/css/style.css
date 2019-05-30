@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: transparent;
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #026aa7;
+}
+
+.trello__list-column {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 0;
+}
+.trello__item-column {
+    flex-grow: 1;
+    list-style: none;
+    width: 250px;
+    padding: 15px 10px;
+    margin-right: 15px;
+    border-radius: 3px;
+    background-color: #dddddd;
+}
+.trello__item-column:last-child {
+    margin-right: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.column__list-tasks {
+    margin-bottom: 15px;
+}
+.column__item-task {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.column__item-task:first-child {
+    margin-top: 10px;
+}
+.column__item-task:last-child {
+    margin-bottom: 0;
+}
+.column__item-task-detail {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+.column__item-task-detail--drag {
+    position: fixed;
+    z-index: 10;
+    cursor: grabbing;
+    box-shadow: 1px 1px 10px #828282;
+}
+.column__item-task-content {
+    padding: 0 5px 5px;
+    flex-grow: 1;
+    width: calc(100% - 20px);
+}
+.column__item-task:hover .column__item-task-close{
+    opacity: 1;
+}
+.column__item-task-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.column__item-task-close::before {
+    width: 100%;
+}
+.column__item-task-footer {
+    width: 100%;
+    padding: 15px;
+    cursor: grab;
+}
+.column__textarea {
+    width: 100%;
+    min-height: 60px;
+    max-height: 200px;
+    box-shadow: 1px 1px 2px #333;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 5px;
+    resize: vertical;
+}
+.column__textarea::placeholder {
+    color: #757474dd;
+}
+.column__textarea--red {
+    border: 1px solid red;
+}
+.column__add {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.column__add--hidden {
+    display: none;
+}
+.column__add-form--hidden {
+    display: none;
+}
+.column__add-form-close {
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+.column__add-form-submit {
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: forestgreen;
+    margin-right: 15px;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+}
